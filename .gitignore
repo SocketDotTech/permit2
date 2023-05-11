@@ -2,3 +2,6 @@
 /cache
 /out
 broadcast/
+node_modules
+cache_hardhat/
+artifacts/
