@@ -90,12 +90,19 @@ contract NonceBitmapTest is Test {
         }
     }
 
-    function testInvalidateNoncesRandomly(uint248 wordPos, uint256 mask) public {
+    function testInvalidateNoncesRandomly(
+        uint248 wordPos,
+        uint256 mask
+    ) public {
         permit2.invalidateUnorderedNonces(wordPos, mask);
         assertEq(mask, permit2.nonceBitmap(address(this), wordPos));
     }
 
-    function testInvalidateTwoNoncesRandomly(uint248 wordPos, uint256 startBitmap, uint256 mask) public {
+    function testInvalidateTwoNoncesRandomly(
+        uint248 wordPos,
+        uint256 startBitmap,
+        uint256 mask
+    ) public {
         permit2.invalidateUnorderedNonces(wordPos, startBitmap);
         assertEq(startBitmap, permit2.nonceBitmap(address(this), wordPos));
 

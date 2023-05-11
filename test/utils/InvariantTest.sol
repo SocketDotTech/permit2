@@ -11,7 +11,11 @@ contract InvariantTest {
         _targetContracts.push(newTargetContract_);
     }
 
-    function targetContracts() public view returns (address[] memory targetContracts_) {
+    function targetContracts()
+        public
+        view
+        returns (address[] memory targetContracts_)
+    {
         require(_targetContracts.length != uint256(0), "NO_TARGET_CONTRACTS");
         return _targetContracts;
     }
@@ -20,7 +24,11 @@ contract InvariantTest {
         _targetSenders.push(newTargetSender_);
     }
 
-    function targetSenders() public view returns (address[] memory targetSenders_) {
+    function targetSenders()
+        public
+        view
+        returns (address[] memory targetSenders_)
+    {
         require(_targetSenders.length != uint256(0), "NO_TARGET_SENDERS");
         return _targetSenders;
     }
@@ -29,7 +37,11 @@ contract InvariantTest {
         _excludedContracts.push(newExcludedContract_);
     }
 
-    function excludeContracts() public view returns (address[] memory excludedContracts_) {
+    function excludeContracts()
+        public
+        view
+        returns (address[] memory excludedContracts_)
+    {
         require(_excludedContracts.length != uint256(0), "NO_TARGET_CONTRACTS");
         return _excludedContracts;
     }

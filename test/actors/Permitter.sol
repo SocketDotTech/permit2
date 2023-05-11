@@ -26,9 +26,15 @@ contract Permitter is PermitSignature {
         token.approve(address(permit2), type(uint256).max);
     }
 
-    function createPermit(uint128 amount, address spender)
+    function createPermit(
+        uint128 amount,
+        address spender
+    )
         public
-        returns (IAllowanceTransfer.PermitSingle memory permit, bytes memory sig)
+        returns (
+            IAllowanceTransfer.PermitSingle memory permit,
+            bytes memory sig
+        )
     {
         uint48 nonce = nonces[spender];
         permit = IAllowanceTransfer.PermitSingle({
@@ -41,14 +47,23 @@ contract Permitter is PermitSignature {
             spender: spender,
             sigDeadline: block.timestamp + 1000
         });
-        sig = getPermitSignature(permit, privateKey, permit2.DOMAIN_SEPARATOR());
+        sig = getPermitSignature(
+            permit,
+            privateKey,
+            permit2.DOMAIN_SEPARATOR()
+        );
 
         nonces[spender]++;
         amountPermitted += amount;
     }
 
     function approve(uint128 amount, address spender) public {
-        permit2.approve(address(token), spender, uint160(amount), uint48(block.timestamp + 1000));
+        permit2.approve(
+            address(token),
+            spender,
+            uint160(amount),
+            uint48(block.timestamp + 1000)
+        );
         amountPermitted += amount;
     }
 }

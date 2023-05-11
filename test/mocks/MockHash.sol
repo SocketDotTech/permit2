@@ -10,11 +10,15 @@ contract MockHash {
     using PermitHash for ISignatureTransfer.PermitTransferFrom;
     using PermitHash for ISignatureTransfer.PermitBatchTransferFrom;
 
-    function hash(ISignatureTransfer.PermitTransferFrom memory permit) external view returns (bytes32) {
+    function hash(
+        ISignatureTransfer.PermitTransferFrom memory permit
+    ) external view returns (bytes32) {
         return permit.hash();
     }
 
-    function hash(ISignatureTransfer.PermitBatchTransferFrom memory permit) external view returns (bytes32) {
+    function hash(
+        ISignatureTransfer.PermitBatchTransferFrom memory permit
+    ) external view returns (bytes32) {
         return permit.hash();
     }
 
