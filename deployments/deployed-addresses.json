@@ -1,0 +1,11 @@
+{
+    "deployer": "0x752B38FA38F53dF7fa60e6113CFd9094b7e040Aa",
+    "addresses": {
+        "aurora": "0x47140353947Bc127c9cf36fabd61112C8Fb8db2A",
+        "fantom": "0x47140353947Bc127c9cf36fabd61112C8Fb8db2A",
+        "avalanche": "0x47140353947Bc127c9cf36fabd61112C8Fb8db2A",
+        "gnosis": "",
+        "polygonZKevm": "",
+        "zksync": ""
+    }
+}

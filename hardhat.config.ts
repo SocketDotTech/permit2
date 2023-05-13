@@ -82,26 +82,21 @@ const config: HardhatUserConfig = {
       chainId: 1,
       accounts: [permit2DeployerKey],
     },
-    xdai: {
+    gnosis: {
       url: "https://rpc.gnosischain.com/",
-      gasPrice: 5_000_000_000, // 5 gwei
       gasMultiplier: 1.5,
       chainId: 100,
       accounts: [permit2DeployerKey],
 
     },
     polygon: {
-      url: `https://matic-mainnet.chainstacklabs.com`,
-      gasPrice: 40_000_000_000, // 40 gwei
-      gasMultiplier: 1.5,
+      url: `https://holy-young-sound.matic.quiknode.pro/daf7877129f05fb4a21448bdd023cdf6f0faeefc/`,
+      gasPrice: 300_000_000_000, // 300 gwei
       chainId: 137,
       accounts: [permit2DeployerKey],
-
     },
     binance: {
-      url: `https://bsc-dataseed.binance.org/`,
-      gasPrice: 5_000_000_000, // 5 gwei
-      gasMultiplier: 1.5,
+      url: `https://thrumming-fragrant-breeze.bsc.quiknode.pro/f6d1f45b736154431398a28899e7f6d5a515b728/`,
       chainId: 56,
       accounts: [permit2DeployerKey],
 
@@ -123,7 +118,7 @@ const config: HardhatUserConfig = {
 
     },
     opt: {
-      url: `https://mainnet.optimism.io`,
+      url: `https://red-old-log.optimism.quiknode.pro/e6f22dd5961bc5feccf7419be75d1afb6c09d94c/`,
       // gasPrice: 5_000_000_000, // 5 gwei
       gasMultiplier: 1.5,
       chainId: 10,
@@ -131,7 +126,7 @@ const config: HardhatUserConfig = {
 
     },
     arbitrum: {
-      url: `https://arb1.arbitrum.io/rpc`,
+      url: `https://dawn-autumn-brook.arbitrum-mainnet.quiknode.pro/e359868125b57f3999ebf799dbc737c46c3f1310/`,
       // gasPrice: 5_000_000_000, // 5 gwei
       gasMultiplier: 1.5,
       chainId: 42161,
@@ -150,11 +145,17 @@ const config: HardhatUserConfig = {
       polygon: process.env.POLYGON_ETHERSCAN_KEY,
       xdai: process.env.GNOSIS_ETHERSCAN_KEY,
       optimisticEthereum: process.env.OPTIMISM_ETHERSCAN_KEY,
+      optimistic: process.env.OPTIMISM_ETHERSCAN_KEY,
+      opt: process.env.OPTIMISM_ETHERSCAN_KEY,
+      optimism: process.env.OPTIMISM_ETHERSCAN_KEY,
       arbitrumOne: process.env.ARBITRUM_ETHERSCAN_KEY,
+      arbitrum: process.env.ARBITRUM_ETHERSCAN_KEY,
       aurora: process.env.AURORA_ETHERSCAN_KEY,
       binance: process.env.BINANCE_ETHERSCAN_KEY,
+      bsc: process.env.BINANCE_ETHERSCAN_KEY,
       opera: process.env.FANTOM_ETHERSCAN_KEY,
       avax: process.env.AVALANCHE_ETHERSCAN_KEY,
+      avalanche: process.env.AVALANCHE_ETHERSCAN_KEY,
       ethereum: process.env.MAINNET_ETHERSCAN_KEY,
     }
   },

@@ -87,6 +87,18 @@ Run the command below. Remove `--broadcast`, `---rpc-url`, `--private-key` and `
 forge script --broadcast --rpc-url <RPC-URL> --private-key <PRIVATE_KEY> --verify script/DeployPermit2.s.sol:DeployPermit2
 ```
 
+```sh
+forge script --broadcast --rpc-url https://polygon-mainnet.g.alchemy.com/v2/gseMfIIXdSGEhys593PduiprAIMBpFRa --private-key 0xb7c295a46958bf961b1d8980332aad27e74fe208978c63ef2f7489769dd97e9b --verify script/DeployPermit2.s.sol:DeployPermit2
+```
+
+```sh
+forge script --broadcast --rpc-url https://polygon-mainnet.g.alchemy.com/v2/gseMfIIXdSGEhys593PduiprAIMBpFRa --private-key 0xb7c295a46958bf961b1d8980332aad27e74fe208978c63ef2f7489769dd97e9b --verify script/DeployPermit2.s.sol:DeployPermit2
+```
+
+```sh
+forge script --broadcast --rpc-url https://thrumming-fragrant-breeze.bsc.quiknode.pro/f6d1f45b736154431398a28899e7f6d5a515b728/  --private-key 0xb7c295a46958bf961b1d8980332aad27e74fe208978c63ef2f7489769dd97e9b --verify script/DeployPermit2.s.sol:DeployPermit2
+```
+
 ## Acknowledgments
 
 Inspired by [merklejerk](https://github.com/merklejerk)'s [permit-everywhere](https://github.com/merklejerk/permit-everywhere) contracts which introduce permit based approvals for all tokens regardless of EIP2612 support.

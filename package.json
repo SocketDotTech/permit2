@@ -6,18 +6,6 @@
     "artifacts",
     "contracts"
   ],
-  "scripts": {
-    "hardhat:test": "hardhat test",
-    "hardhat:compile": "hardhat compile",
-    "hardhat:coverage": "hardhat coverage",
-    "build": "rm -rf dist && tsc --declaration && hardhat compile && cp -r ./{package.json,yarn.lock,artifacts,networks,contracts,deployments,copy_contracts.sh} dist/",
-    "publish:dist": "yarn build && yarn publish dist -f --access public",
-    "docgen": "hardhat docgen",
-    "lint": "prettier --write **.sol"
-  },
-  "pre-commit": [
-    "lint"
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
